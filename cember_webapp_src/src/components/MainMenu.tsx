@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Play, Volume2, VolumeX, Shield, Zap, Flame, Trophy, Info, X, Map, Award, Feather, Sparkles, Globe, Users, Maximize2, Minimize2, Smartphone, ShoppingBag, Star } from 'lucide-react';
 import { GameDifficulty } from '../types';
 import { DIFFICULTY_BADGES, getAdventureProgress, getUnlockedBadges, ADVENTURE_STAGES } from '../adventureData';
-import { isFullscreen, toggleFullscreen } from '../utils/fullscreen';
+import { isFullscreen, isFullscreenSupported, toggleFullscreen } from '../utils/fullscreen';
 import { gyroController, GyroState } from '../utils/gyroscope';
 import { soundEngine } from '../utils/audio';
 import { ShopModal } from './ShopModal';
@@ -102,6 +102,7 @@ export const MainMenu: React.FC<MainMenuProps> = ({
           </button>
 
           {/* Fullscreen button */}
+          {isFullscreenSupported() && (
           <button
             id="menu-fullscreen-btn"
             onClick={handleToggleFs}
@@ -111,6 +112,7 @@ export const MainMenu: React.FC<MainMenuProps> = ({
           >
             {inFullscreen ? <Minimize2 className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-cyan-400" /> : <Maximize2 className="w-3.5 h-3.5 sm:w-4 sm:h-4" />}
           </button>
+          )}
 
           <button
             id="badges-modal-btn"

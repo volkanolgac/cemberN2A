@@ -16,7 +16,7 @@ import {
   Users,
 } from 'lucide-react';
 import { GameScore, ActivePowerUpStatus, CountryTeam, CardPenaltyState } from '../types';
-import { isFullscreen, toggleFullscreen } from '../utils/fullscreen';
+import { isFullscreen, isFullscreenSupported, toggleFullscreen } from '../utils/fullscreen';
 import { gyroController, GyroState } from '../utils/gyroscope';
 import { CountryFlag } from './CountryFlag';
 import { soundEngine } from '../utils/audio';
@@ -245,6 +245,7 @@ export const GameHUD: React.FC<GameHUDProps> = ({
             </button>
 
             {/* Fullscreen toggle */}
+            {isFullscreenSupported() && (
             <button
               id="hud-fullscreen-btn"
               onClick={handleToggleFs}
@@ -253,6 +254,7 @@ export const GameHUD: React.FC<GameHUDProps> = ({
             >
               {inFullscreen ? <Minimize2 className="w-4 h-4 text-cyan-400" /> : <Maximize2 className="w-4 h-4" />}
             </button>
+            )}
 
             {/* Audio toggle */}
             <button

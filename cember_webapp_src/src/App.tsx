@@ -457,7 +457,7 @@ export default function App() {
   return (
     <main
       id="cember-app-root"
-      className="relative w-full h-[100dvh] max-w-md mx-auto bg-slate-950 text-slate-100 flex flex-col justify-between overflow-hidden shadow-2xl select-none"
+      className="relative w-full h-[100dvh] pt-[env(safe-area-inset-top)] pb-[env(safe-area-inset-bottom)] max-w-md mx-auto bg-slate-950 text-slate-100 flex flex-col justify-between overflow-hidden shadow-2xl select-none"
     >
       {/* Background Subtle Gradient Grid */}
       <div className="absolute inset-0 bg-[radial-gradient(#1e293b_1px,transparent_1px)] [background-size:24px_24px] opacity-35 pointer-events-none" />

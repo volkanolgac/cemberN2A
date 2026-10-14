@@ -10,6 +10,16 @@ export function isFullscreen(): boolean {
   );
 }
 
+// False inside the native iOS app (already fullscreen) and where the Fullscreen API is unavailable
+export function isFullscreenSupported(): boolean {
+  if (typeof document === 'undefined') return false;
+  const cap = (window as unknown as { Capacitor?: { isNativePlatform?: () => boolean } }).Capacitor;
+  if (cap?.isNativePlatform?.()) return false;
+  return Boolean(
+    document.fullscreenEnabled || (document as unknown as { webkitFullscreenEnabled?: boolean }).webkitFullscreenEnabled
+  );
+}
+
 export async function toggleFullscreen(): Promise<boolean> {
   if (typeof document === 'undefined') return false;
 

@@ -57,7 +57,7 @@ export const getCountryFlagCode = (teamOrId?: CountryTeam | { id?: string; flagC
 export const getCountryFlagUrl = (teamOrId?: CountryTeam | { id?: string; flagCode?: string } | string | null): string => {
   const code = getCountryFlagCode(teamOrId);
   if (!code) return '';
-  return `https://flagcdn.com/w80/${code}.png`;
+  return `flags/${code}.png`;
 };
 
 interface CountryFlagProps {
@@ -82,7 +82,7 @@ export const CountryFlag: React.FC<CountryFlagProps> = ({
   const id = countryId || team?.id || '';
   const code = getCountryFlagCode(team || id);
   const teamName = team?.name || id || 'Ülke';
-  const imgUrl = code ? `https://flagcdn.com/w80/${code}.png` : '';
+  const imgUrl = getCountryFlagUrl(team || id);
 
   // Dimension classes based on size & shape
   let sizeClasses = '';
