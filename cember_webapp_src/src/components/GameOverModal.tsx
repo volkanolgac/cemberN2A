@@ -153,13 +153,13 @@ export const GameOverModal: React.FC<GameOverModalProps> = ({
                 ? 'BÖLÜM GEÇİLDİ!'
                 : 'BÖLÜM GEÇİLEMEDİ'
               : isWinner
-              ? 'VICTORY'
-              : 'MATCH COMPLETE'}
+              ? 'ZAFER!'
+              : 'MAÇ BİTTİ'}
           </span>
         </div>
 
         {/* Title */}
-        <h2 className="text-2xl font-black tracking-tight text-white mb-0.5">
+        <h2 className="text-2xl font-black tracking-normal leading-tight text-white mb-0.5">
           {matchHeader}
         </h2>
 
@@ -194,12 +194,12 @@ export const GameOverModal: React.FC<GameOverModalProps> = ({
                 : 'Harika galibiyet! Sıradaki milli takım rakibine karşı mücadeleye devam et.'
             : isAdventureMode
               ? 'Mükemmel refleksler! Arena aşaması başarıyla tamamlandı.'
-              : 'Superior reflexes through the Çember arena!'
+              : 'Çember arenasında üstün refleksler!'
             : isTournamentMode
             ? 'Maçı kaybettin ama pes etme! Rövanş maçına çık veya stratejini tazele.'
             : isAdventureMode
             ? 'Bu bölümü geçmek için rakibi mağlup etmelisin. Tekrar dene!'
-            : 'Good battle! Train your strikes and try again.'}
+            : 'İyi mücadeleydi! Vuruşlarını geliştir ve tekrar dene.'}
         </p>
 
         {/* Newly Unlocked Badge Celebration Banner! */}
@@ -272,7 +272,7 @@ export const GameOverModal: React.FC<GameOverModalProps> = ({
               <Flame className="w-4 h-4" />
             </div>
             <div>
-              <div className="text-[9px] uppercase font-bold text-slate-400">Max Combo</div>
+              <div className="text-[9px] uppercase font-bold text-slate-400">Maks. Kombo</div>
               <div className="text-xs font-extrabold text-white">{stats.maxCombo}x</div>
             </div>
           </div>

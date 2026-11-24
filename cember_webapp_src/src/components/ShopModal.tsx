@@ -261,7 +261,7 @@ export const ShopModal: React.FC<ShopModalProps> = ({ onClose }) => {
                       <div className="min-w-0">
                         <div className="flex items-center gap-1.5">
                           <span className="text-sm font-black text-white truncate">{skin.name}</span>
-                          <span className="text-xs">{skin.icon}</span>
+                          <span className="text-xs drop-shadow-[0_0_4px_rgba(255,255,255,0.9)]">{skin.icon}</span>
                         </div>
                         <p className="text-[10px] text-slate-400 leading-tight">{skin.description}</p>
                       </div>
@@ -340,7 +340,7 @@ export const ShopModal: React.FC<ShopModalProps> = ({ onClose }) => {
                       <div className="min-w-0">
                         <div className="flex items-center gap-1.5">
                           <span className="text-sm font-black text-white truncate">{skin.name}</span>
-                          <span className="text-xs">{skin.icon}</span>
+                          <span className="text-xs drop-shadow-[0_0_4px_rgba(255,255,255,0.9)]">{skin.icon}</span>
                         </div>
                         <p className="text-[10px] text-slate-400 leading-tight">{skin.description}</p>
                       </div>
@@ -491,9 +491,9 @@ export const ShopModal: React.FC<ShopModalProps> = ({ onClose }) => {
                       </div>
 
                       <div className="min-w-0">
-                        <div className="flex items-center gap-2">
-                          <span className="text-xs font-black text-white truncate">{booster.name}</span>
-                          <span className="px-1.5 py-0.2 rounded text-[9px] font-black bg-amber-400 text-slate-950">
+                        <div className="flex flex-wrap items-center gap-x-2 gap-y-1">
+                          <span className="text-xs font-black text-white leading-tight">{booster.name}</span>
+                          <span className="px-1.5 py-0.5 rounded text-[9px] font-black bg-amber-400 text-slate-950 whitespace-nowrap shrink-0">
                             {booster.badgeText}
                           </span>
                         </div>
