@@ -1,7 +1,7 @@
 import type { CapacitorConfig } from '@capacitor/cli';
 
 const config: CapacitorConfig = {
-  appId: 'com.volkanolgac.cember',
+  appId: 'com.cember.game',
   appName: 'ÇEMBER',
   webDir: 'dist',
   backgroundColor: '#0B0F19',

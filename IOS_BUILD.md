@@ -39,10 +39,10 @@ cd cember_webapp_src
 npm install
 npm install @capacitor/core @capacitor/ios @capacitor/splash-screen @capacitor/haptics @fontsource/outfit
 npm install -D @capacitor/cli @capacitor/assets
-npx cap init "ÇEMBER" com.volkanolgac.cember --web-dir dist
+npx cap init "ÇEMBER" com.cember.game --web-dir dist
 ```
 
-> Bundle ID: pick it once and never change it. Reusing the Android `applicationId` (`com.volkanolgac.cemberwebapp`) is fine. A cleaner `com.volkanolgac.cember` also works.
+> Bundle ID: pick it once and never change it. Reusing the Android `applicationId` (`com.volkanolgac.cemberwebapp`) is fine. A cleaner `com.cember.game` also works.
 
 Replace the generated `capacitor.config.ts` with:
 
@@ -50,7 +50,7 @@ Replace the generated `capacitor.config.ts` with:
 import type { CapacitorConfig } from '@capacitor/cli';
 
 const config: CapacitorConfig = {
-  appId: 'com.volkanolgac.cember',
+  appId: 'com.cember.game',
   appName: 'ÇEMBER',
   webDir: 'dist',
   backgroundColor: '#0B0F19',
